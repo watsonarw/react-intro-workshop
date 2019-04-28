@@ -19,3 +19,12 @@ Trying out the idea of a first react app to check if its feasible
 5. Explain that this kind of test isn't particularly useful. But just showing how easy it is to test DOM in react. We'll look at more useful tests later
 6. Include in `App.js`
 7. Cleanup `App.css`
+
+---
+
+0. Add a message with title and body. It's not very well styled.
+1. Explain styling with css classes, look at App.js again. Explain that this is not very scaleable, as your app grows, you need to be careful about name conflicts, etc.
+2. There's an easier way
+3. `yarn add styled-components`
+4. Style the message card, message board, and message title
+5. Pull out a component and add a second message
