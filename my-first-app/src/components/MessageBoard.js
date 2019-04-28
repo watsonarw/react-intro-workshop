@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import Message from './Message';
+import NewMessageSection from './NewMessageSection';
 import { useMessageLoader } from '../hooks';
 
 const MessageBoard = () => {
@@ -15,6 +16,7 @@ const MessageBoard = () => {
               return (<Message title={message.title}>{message.contents}</Message>);
             })
       }
+      <NewMessageSection />
     </MessageBoardWrapper>
   );
 }

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Message = (props) => {
   return (
-    <MessageCard>
+    <MessageCard data-testid={props['data-testid']}>
       { props.title ? (<MessageTitle>{props.title}</MessageTitle>) : null }
       <span>{props.children}</span>
     </MessageCard>

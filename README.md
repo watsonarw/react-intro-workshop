@@ -57,3 +57,17 @@ Trying out the idea of a first react app to check if its feasible
 8. Lack of feedback when loading is bad, let's add a spinner
 9. _Explain (briefly) css spinner_
 10. Extract state and effect hooks into their own hook/file
+
+---
+
+#### Form fields and editing values
+
+1. A message board isn't very useful if you can't set messages
+2. Create `NewMessageSection.js` and `NewMessageSection.js`
+3. Add an empty test for should show a preview
+4. Add an empty test for should save on clicking save
+5. Start filling out show preview test. Use `fireEvent` from `react-testing-library`
+6. Make it pass by adding form fields, and a preview message
+7. Style it a bit, nothing fancy
+8. Fill out save test
+9. Add button, service, and connect them up.

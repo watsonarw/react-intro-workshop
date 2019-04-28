@@ -4,7 +4,18 @@ export const fetchMessages = async () => {
   const messagesJson = localStorage.getItem('messages');
   return await new Promise((resolve) => {
     setTimeout(() => {
-      resolve(JSON.parse(messagesJson) || []);
-    }, 2000);
+      const data = messagesJson ? JSON.parse(messagesJson) : [];
+      resolve(data);
+    }, 1000);
   });
+};
+
+export const createMessage = async (message) => {
+  const currentMessages = await fetchMessages();
+  const newMessages = [
+    ...currentMessages,
+    message
+  ];
+  localStorage.setItem('messages', JSON.stringify(newMessages));
+  return true
 };
