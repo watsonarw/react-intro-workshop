@@ -1,19 +1,39 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Message from './Message';
+import { useMessageLoader } from '../hooks';
 
 const MessageBoard = () => {
+  const { messages, isLoadingMessages } = useMessageLoader();
+
   return (
     <MessageBoardWrapper>
       <h2>Andrew's Message Board</h2>
-      <Message title="Some title!">It's a message, yo!</Message>
-      <Message title="A second message for the board!">
-        We're learning react, this is fun isn't it?
-      </Message>
-      <Message>What if we don't want a title?</Message>
+      { isLoadingMessages
+          ? <Spinner/>
+          : messages.map((message) => {
+              return (<Message title={message.title}>{message.contents}</Message>);
+            })
+      }
     </MessageBoardWrapper>
   );
 }
+
+const spin = keyframes`
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+`;
+
+const Spinner = styled.div`
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  border: 5px solid #aaa;
+  border-top-color: purple;
+  box-sizing: border-box;
+  margin: 50px auto;
+  animation: ${spin} 1s linear infinite
+`;
 
 const MessageBoardWrapper = styled.section`
   background-color: white;
