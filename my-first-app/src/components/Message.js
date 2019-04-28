@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Message = (props) => {
   return (
     <MessageCard>
-      <MessageTitle>{props.title}</MessageTitle>
+      { props.title ? (<MessageTitle>{props.title}</MessageTitle>) : null }
       <span>{props.children}</span>
     </MessageCard>
   );

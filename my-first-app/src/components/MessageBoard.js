@@ -10,6 +10,7 @@ const MessageBoard = () => {
       <Message title="A second message for the board!">
         We're learning react, this is fun isn't it?
       </Message>
+      <Message>What if we don't want a title?</Message>
     </MessageBoardWrapper>
   );
 }

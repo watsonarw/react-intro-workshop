@@ -28,3 +28,9 @@ Trying out the idea of a first react app to check if its feasible
 3. `yarn add styled-components`
 4. Style the message card, message board, and message title
 5. Pull out a component and add a second message
+
+---
+
+0. Add a message *without* a title
+1. Change the message component to have a default title
+2. Change the message component to not render the title at all
